@@ -1,0 +1,291 @@
+/* apply these styles to all elements.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* apply these styles to all elements.*/
+::selection {
+    background: rgba(0, 0, 0, .2);
+}
+
+
+/* apply these styles to body component.*/
+body {
+    /* background color */
+    background: grey;
+    /* minimum height measured in viewport height. */
+    min-height: 100vh;
+    /* prevent horizontal scrolling by hiding the extended content.*/
+    overflow-x: hidden;
+    /* text color is white*/
+    color: #fff;
+}
+
+
+/* apply these styles to header component.*/
+header {
+    /* fix the header on the screen*/
+    position: fixed;
+    /* header on the very top*/
+    top: 0;
+    /* header on the far left*/
+    left: 0;
+    /* header width is 100% of the screen width*/
+    width: 100vw;
+    /* header height is 15% of the screen height*/
+    height: 15vh;
+    /* adds 1% of viewport width on the top/bottom and left/right*/
+    padding: 1vw 1vw;
+    /* use flexbox layout*/
+    display: flex;
+    /* vertically center the elements*/
+    align-items: center;
+    /* set the backround color*/
+    background: rgba(0, 0, 0, 0.6);
+    /* set the header on top of the others*/
+    z-index: 100;
+}
+
+/* logo belongs to headers, it takes 1 part.*/
+.logo {
+    flex: 1
+}
+
+/* logo image belongs to headers, set the height to 6 viewport height.*/
+.logo img {
+    height: 6vw;
+}
+
+/* name belongs to headers, it takes 2 part.*/
+.name {
+    /* the text size is 2% of viewport width.*/
+    font-size: 2vw;
+    /* the text color is white.*/
+    color: white;
+    /* the text takes 2 part.*/
+    flex: 2
+}
+
+/* navigation belongs to headers*/
+.navigation {
+    /* use flexbox layout*/
+    display: flex;
+    /* it takes 7 part.*/
+    flex: 7;
+    /* adds 10% of viewport width on the left/right */
+    padding: 0vh 10vw;
+    /* horizontally center the elements*/
+    justify-content: center;
+    /* vertically center the elements*/
+    align-items: center;
+}
+
+/* navigation buttons to headers*/
+.navigation a {
+    /* text color is white*/
+    color: white;
+    /* adds 2% of viewport width on the top/bottom, and adds 1% of viewport width on the left/right*/
+    padding: 2vw 1vw;
+    font-weight: 600;
+    /* the text size is 1.4% of viewport width.*/
+    font-size: 1.4vw;
+    /* center the text horizontally*/
+    text-align: center;
+    /* no effect when selected*/
+    text-decoration: none;
+    /* it takes 1 part.*/
+    flex: 1;
+}
+
+/* when cursor hover over the navigation, some change is applied to the navigation bar */
+.navigation a:hover,
+.navigation a.active {
+    /* change the color of background to grey*/
+    background: grey;
+    /* change the color of the text to white*/
+    color: #fff;
+    /* change the padding to 1vw and 1vw*/
+    padding: 1vw 1vw;
+    /* the border of object becomes 1vw*/
+    border-radius: 1vw;
+}
+
+/* an independent container moves with the page*/
+.parallax {
+    /* the position is fixed when you sroll the page */
+    position: relative;
+    /* the layout of this container is flex */
+    display: flex;
+    /* center all children elements horizontally */
+    justify-content: center;
+    /* center all children elements vertically */
+    align-items: center;
+    /* the height of this container */
+    height: 100vh;
+}
+
+/* the text in the parallax container*/
+#text {
+    /* the position of this container is fixed when you sroll the page */
+    position: fixed;
+    /* the text size is 7*/
+    font-size: 7vw;
+    /* the text color is white */
+    color: #fff;
+    /* the subtle shadow of text, horizontal offset is 2px,
+     vertical offset is 2px, the blur radius is 4px, 100% opacity */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* the image in the parallax container*/
+.parallax img {
+    /* the absolute position in the parallax container*/
+    position: absolute;
+    /* the top position of the picture is 20% view height above the container*/
+    top: -20vh;
+    /* the left position of the picture is the same of the container*/
+    left: 0;
+    /* the height of the picture is 120% view height*/
+    height: 120vh;
+    /* the image can't be clicked or hovered */
+    pointer-events: none;
+}
+
+/* the attributes of sections*/
+.sec {
+    /* the position context for children elements is relative. */
+    position: relative;
+    /* the background color is grey */
+    background: grey;
+    /* the padding is 18% view height and 2% view width */
+    padding: 18vh 2vw;
+    /* the text color is white */
+    color: #fff;
+    /* put this element above others in the stacking context. */
+    z-index: 10;
+}
+
+/* the attributes of header in sections*/
+.sec h2 {
+    /* the font size is 5% view height*/
+    font-size: 5vh;
+    /* space below the heading is 3% of the view height */
+    margin-bottom: 3vh;
+    /* center the heading text horizontally */
+    text-align: center;
+}
+
+/* the attributes of paragraph in sections */
+.sec p {
+    /* the font size is 2.5 view height */
+    font-size: 2.5vh;
+    /* the color of text is white */
+    color: #fff;
+    /* the space below the paragraph is 5% view height */
+    margin-bottom: 5vh;
+    /* align the text to both left and right margins*/
+    text-align: justify;
+    /* no padding for top and bottom, 5% view width padding for left and right*/
+    padding: 0vw 5vw;
+    /* light font weight */
+    font-weight: 300;
+}
+
+/* the attributes of players section */
+.players {
+    /* the children element position is relative */
+    position: relative;
+    /* the layout of this container is flexbox. */
+    display: flex;
+    /* the children elements have equal space around them */
+    justify-content: space-around;
+    /* align items to the top of the container */
+    align-items: flex-start;
+    /* the container spans 100% of parent width*/
+    width: 100%;
+    /* the height is 120% of view height*/
+    height: 120vh;
+    /* 2% of padding on all sides*/
+    padding: 2vh;
+}
+
+/* the player container in the players block. */
+.player {
+    /* the height of container is 40% view height */
+    height: 40vh;
+    /* the children elements positioning context is relative */
+    position: relative;
+    /* make the container a block element. */
+    display: block;
+}
+
+/* the image in the player. */
+.player img {
+    /* the children elements positioning context is relative */
+    position: relative;
+    /* make the container a block element. */
+    display: block;
+    /* the top position of the picture is 10% view height above the container */
+    top: 10vh;
+    /* the width of the picture is 40% view height */
+    width: 40vh;
+    /* the height of the picture is 50% view height */
+    height: 50vh;
+    /* the border of object is 0.5 vh */
+    border-radius: 0.5vh;
+}
+
+/* the player name in the player. */
+.p_name {
+    /* the children elements positioning context is absolute */
+    position: absolute;
+    /* the top position of the picture is 58% view height above the container */
+    top: 58vh;
+    /* the left position of the picture is 20% view height*/
+    left: 20vh;
+    /* the width of the picture is 20% view height */
+    width: 30vh;
+    /* the height of the picture is 5% view height */
+    height: 5vh;
+    /* centers the element by moving it back 50% of its own width/height */
+    transform: translate(-50%, -50%);
+    /* the text color is white */
+    color: white;
+    /* the font size is 3 vh */
+    font-size: 3vh;
+    /* center the items*/
+    text-align: center;
+    /* the font of text */
+    font-family: Arial, sans-serif;
+    /* the color of background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* the padding 1vh and 1vh */
+    padding: 1vh 1vh;
+    /* the border of object is 5vh */
+    border-radius: 5vh;
+    /* hidden at the beginning */
+    opacity: 0;
+    /* put it above all other objects */
+    z-index: 100;
+}
+
+.p_text {
+    position: absolute;
+    top: 85vh;
+    left: 20vh;
+    width: 50vh;
+    height: 30vh;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5vh;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3vh 3vh;
+    border-radius: 5vh;
+    opacity: 0;
+    z-index: 100;
+}
